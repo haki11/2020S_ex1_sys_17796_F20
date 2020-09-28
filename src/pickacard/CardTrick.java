@@ -18,7 +18,7 @@ public class CardTrick {
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             
-            // Commit to the right branch
+            // Commit to the branch
         }
 
         //insert code to ask the user for Card value and suit, create their card
