@@ -1,5 +1,6 @@
 package pickacard;
 //Krista Powell
+// Todats date is 2020-09-29 
 
 /**
  * A class that models playing card Objects. Cards have
