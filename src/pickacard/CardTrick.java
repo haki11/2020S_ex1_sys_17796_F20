@@ -24,6 +24,8 @@ public class CardTrick
       //insert code to ask the user for Card value and suit, create their card
       // and search magicHand here
       //Then report the result here
+      
+      // add some work to implement step #6
    }
 
 }
