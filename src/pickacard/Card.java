@@ -11,7 +11,7 @@ package pickacard;
  * @author Paul Bonenfant
  */
 public class Card {
-
+    //how does this work???
    private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
 
