@@ -55,14 +55,14 @@ public class CardTrick {
         
         //Search for the chosen card in magicHand and tell the user the results
         for (int i=0; i<magicHand.length; i++){
-            if(userCard.getValue() == magicHand[i].getValue()){
-                if (userCard.getSuit().equals(magicHand[i].getSuit())){
-                    System.out.println("Your card " + userCard.toString() + " is in the magic hand!");
+            if(luckyCard.getValue() == magicHand[i].getValue()){
+                if (luckyCard.getSuit().equals(magicHand[i].getSuit())){
+                    System.out.println("The lucky card " + luckyCard.toString() + " is in the magic hand!");
                     break;
                 }
             } else {
                 if (i == magicHand.length - 1){
-                    System.out.println("Your card " + userCard.toString() + " is not in the magic hand.");
+                    System.out.println("The lucky card " + luckyCard.toString() + " is not in the magic hand.");
                 }
             }
         }
@@ -71,7 +71,7 @@ public class CardTrick {
 //        for (int i=0; i<magicHand.length; i++){
 //            System.out.println(magicHand[i].toString());
 //        }
-      
+//      
     }
 
 }
