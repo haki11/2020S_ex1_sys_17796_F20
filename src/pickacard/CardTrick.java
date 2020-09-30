@@ -21,15 +21,19 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
+        Card luckyCard = new Card();
+        luckyCard.setValue(12);
+        luckyCard.setSuit("Diamonds");
+        
             
         // Users Enters A Card Number & Chooses A Card Suit
-        System.out.println ("Pick a card number between 1-10 or J = 11, Q = 12, K = 13");
-        int cardValue = input.nextInt();
-        System.out.println ("Pick a suit: Clubs, Diamonds, Spades, or Hearts");
-        String cardSuit = input.next();
-        
-        
-        System.out.println ("Cards In The Hand");
+        // System.out.println ("Pick a card number between 1-10 or J = 11, Q = 12, K = 13");
+        // int cardValue = input.nextInt();
+        // System.out.println ("Pick a suit: Clubs, Diamonds, Spades, or Hearts");
+        // String cardSuit = input.next();
+       
+
+        // System.out.println ("Cards In The Hand");
         
         // Searches Magic Hand 
         // for (Card card : magicHand) {
