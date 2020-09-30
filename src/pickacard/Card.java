@@ -45,7 +45,7 @@ public class Card {
         this.value = value;
     } 
     
-   public int randomNumber() {
+   public int randomCardNumber() {
        int value = (int)(Math.random() * 13) + 1; // A random number from 1-13 will be shown
        return value;
    }
