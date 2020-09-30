@@ -7,8 +7,8 @@ package pickacard;
  * There are 52 cards in a deck, no jokers.
  * This code is to be used in Exercise 1. When you create your own branch,
  * add your name as an author.
- * @author dancye
- * @author Paul Bonenfant
+ * @author Naol Denko
+ * @date September 29th 2020
  */
 public class Card {
 
@@ -30,7 +30,7 @@ public class Card {
     public void setSuit(String suit) {
         this.suit = suit;
     }
-
+    
     /**
      * @return the value
      */
@@ -43,8 +43,17 @@ public class Card {
      */
     public void setValue(int value) {
         this.value = value;
-    }
-   
-   
+    } 
     
+   public int randomNumber() {
+       int value = (int)(Math.random() * 13) + 1; // A random number from 1-13 will be shown
+       return value;
+   }
+   
+      
+    public int randomSuit () {
+        int value = (int)(Math.random() * 4);
+        return value;
+    }
+
 }
