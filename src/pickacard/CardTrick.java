@@ -29,24 +29,29 @@ public class CardTrick {
             magicHand[i] = c; // add generated card at [i] in magicHands
         }
         
-        //Prompt the user to select their card aswell as handle bad inputs
-        System.out.print("Pick a card, any card!\nEnter card value: ");
-        int userVal = input.nextInt();
-        while (userVal < 1 || userVal > 13) {
-            System.out.print("Must enter a value between 1 and 13: ");
-            userVal = input.nextInt();
-        }
-        System.out.print("Enter card suit (Hearts=0, Diamonds=1, Spades=2, Clubs=3): ");
-        int userSuit = input.nextInt();
-        while (userSuit < 0 || userSuit > 3) {
-            System.out.print("Must enter a value between 0 and 3: ");
-            userSuit = input.nextInt();
-        }
+        ////Prompt the user to select their card aswell as handle bad inputs
+        //System.out.print("Pick a card, any card!\nEnter card value: ");
+        //int userVal = input.nextInt();
+        //while (userVal < 1 || userVal > 13) {
+        //    System.out.print("Must enter a value between 1 and 13: ");
+        //    userVal = input.nextInt();
+        //}
+        //System.out.print("Enter card suit (Hearts=0, Diamonds=1, Spades=2, Clubs=3): ");
+        //int userSuit = input.nextInt();
+        //while (userSuit < 0 || userSuit > 3) {
+        //    System.out.print("Must enter a value between 0 and 3: ");
+        //    userSuit = input.nextInt();
+        // }
         
-        //Create the card object for the users chosen card
-        Card userCard = new Card();
-        userCard.setSuit(Card.SUITS[userSuit]);
-        userCard.setValue(userVal);
+        ////Create the card object for the users chosen card
+        //Card userCard = new Card();
+        //userCard.setSuit(Card.SUITS[userSuit]);
+        //userCard.setValue(userVal);
+        
+        //Create the luckyCard object and set is values
+        Card luckyCard = new Card();
+        luckyCard.setSuit(Card.SUITS[0]);
+        luckyCard.setValue(4);
         
         //Search for the chosen card in magicHand and tell the user the results
         for (int i=0; i<magicHand.length; i++){
