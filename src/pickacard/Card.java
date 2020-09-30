@@ -12,6 +12,7 @@ package pickacard;
  */
 public class Card {
     //how does this work???
+    //change on github
    private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
 
