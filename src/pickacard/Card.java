@@ -7,22 +7,30 @@ package pickacard;
  * There are 52 cards in a deck, no jokers.
  * This code is to be used in Exercise 1. When you create your own branch,
  * add your name as an author.
- * @author dancye
- * @author Paul Bonenfant
+ * @author Noah McNabb
+ * @date 30/09/20
  */
 public class Card {
-    //how does this work???
-    //change on github
+    
    private String suit; //clubs, spades, diamonds, hearts
    private int value;//1-13
 
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
+
+   
     /**
      * @return the suit
      */
     public String getSuit() {
         return suit;
     }
+      /**
+     * @return the value
+     */
+    public int getValue() {
+        return value;
+    }
+
 
     /**
      * @param suit the suit to set
@@ -30,19 +38,17 @@ public class Card {
     public void setSuit(String suit) {
         this.suit = suit;
     }
-
-    /**
-     * @return the value
-     */
-    public int getValue() {
-        return value;
-    }
-
     /**
      * @param value the value to set
      */
     public void setValue(int value) {
         this.value = value;
+    }
+    /**
+     * @return easy to read card output
+     */
+    public String toString() {
+        return value + " of " + suit;
     }
    
    
