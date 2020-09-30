@@ -33,18 +33,22 @@ public class CardTrick {
         // String cardSuit = input.next();
        
 
-        // System.out.println ("Cards In The Hand");
+        System.out.println ("Cards In The Hand");
         
         // Searches Magic Hand 
-        // for (Card card : magicHand) {
-        //  System.out.println (card.getValue() + " of " + card.getSuit());
-        // }
-        //    System.out.println ("You guessed the card number to be: " + cardValue + " and the suit to be: " + cardSuit);
+        for (Card card : magicHand) {
+            System.out.println (card.getValue() + " of " + card.getSuit());
+         }
+           System.out.println ("Your card's number is: " + luckyCard.getValue() + " and your card's suit is: " + luckyCard.getSuit());
            
-      // for (Card cardCheck : magicHand) {
-      //      if (cardValue == cardCheck.getValue() && cardSuit ==  cardCheck.getSuit()) {
-      //      System.out.println ("Congrats, your card matched one of the cards in the hand!"); // Displayed If The User Guessed The Right Card
-      //      }
+       for (Card cardCheck : magicHand) {
+            if (luckyCard.getValue() == cardCheck.getValue() && luckyCard.getSuit() ==  cardCheck.getSuit()) {
+                System.out.println ("Congrats, your card matched one of the cards in the hand!"); // Displayed If The User Guessed The Right Card
+            }
+            
+            else {
+                System.out.println ("No match.");
+            }
       }
     }
 }
