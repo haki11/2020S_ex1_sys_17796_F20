@@ -28,12 +28,17 @@ public class CardTrick
       }
 
 //User must pick a card. Number and suit
-      System.out.println("Pick a card, Any card!");
-      System.out.println("Pick a number from 1-13");
-      int cardPickValue = scan.nextInt();
-      System.out.println("pick a suit: Hearts, Diamond, Clubs or Spades");
-      String cardPickSuit = scan.next();
-
+      
+//       System.out.println("Pick a card, Any card!");
+//       System.out.println("Pick a number from 1-13");
+//       int cardPickValue = scan.nextInt();
+//       System.out.println("pick a suit: Hearts, Diamond, Clubs or Spades");
+//       String cardPickSuit = scan.next();
+      
+//Lucky Card
+      Card luckyCard = new Card();
+      luckyCard.setValue(5);
+      luckyCard.setSuit(3);
 
 
 // and search magicHand here
