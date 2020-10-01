@@ -23,8 +23,8 @@ public class CardTrick {
         
         for (int i = 0; i < magicHand.length; i++) {
 
-            c.setValue(1 + random.nextInt(14));
-            c.setSuit(Card.SUITS[0 + random.nextInt(3)]);
+            c.setValue(1 + random.nextInt(13));
+            c.setSuit(Card.SUITS[0 + random.nextInt(4)]);
 
         }
 
@@ -32,24 +32,34 @@ public class CardTrick {
         luckyCard.setValue(7);
         luckyCard.setSuit("Diamonds");
         
-        System.out.println("Hello User\nWhat is the card value you want?");
-        int userValue = input.nextInt();
-
-        System.out.println("What is the suit you want?");
-        String userSuit = input.next();
-
-        Card userCard = new Card();
-        userCard.setSuit(userSuit);
-        userCard.setValue(userValue);
-
-        System.out.println(userCard.getValue());
-        System.out.println(userCard.getSuit());
-
-        if (userCard.getValue() == c.getValue() && userCard.getSuit().equals(c.getSuit())) {
+//        System.out.println(c.getSuit());
+//        System.out.println(c.getValue());
+        
+        if (luckyCard.getValue() == c.getValue() && luckyCard.getSuit().equals(c.getSuit())) {
             System.out.println("The cards are the same!\nYOU WIN");
         } else {
             System.out.println("The cards are not the same!\nYOU LOSE");
         }
+        
+        
+//        System.out.println("Hello User\nWhat is the card value you want?");
+//        int userValue = input.nextInt();
+//
+//        System.out.println("What is the suit you want?");
+//        String userSuit = input.next();
+//
+//        Card userCard = new Card();
+//        userCard.setSuit(userSuit);
+//        userCard.setValue(userValue);
+//
+//        System.out.println(userCard.getValue());
+//        System.out.println(userCard.getSuit());
+//
+//        if (userCard.getValue() == c.getValue() && userCard.getSuit().equals(c.getSuit())) {
+//            System.out.println("The cards are the same!\nYOU WIN");
+//        } else {
+//            System.out.println("The cards are not the same!\nYOU LOSE");
+//        }
 
     }
 
