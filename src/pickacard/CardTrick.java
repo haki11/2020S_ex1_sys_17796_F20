@@ -28,6 +28,10 @@ public class CardTrick {
 
         }
 
+        Card luckyCard = new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit("Diamonds");
+        
         System.out.println("Hello User\nWhat is the card value you want?");
         int userValue = input.nextInt();
 
