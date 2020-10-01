@@ -46,6 +46,8 @@ public class Card
    }
 
    /**
+    * must be between 1-13
+    *
     * @param value the value to set
     */
    public void setValue (int value)
