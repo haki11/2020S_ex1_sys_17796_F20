@@ -21,8 +21,22 @@ public class CardTrick {
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             //it is a String
                c.setSuit(Card.SUITS[(int)(Math.random() * 3)]);
+               System.out.println(c.getValue() + c.getSuit());
         }
-
+         //ask user to input the value and suit of the lucky card
+         System.out.println("please enter the value and suit of your luckycard");
+         int valueLucky = sc.nextInt();
+         String suitLucky = sc.nextLine();
+         
+        //Then report the result and match magicHand[i] here.
+          Card luckyCard = new Card();
+        if(valueLucky == luckyCard.getValue() && suitLucky.equals(luckyCard.getSuit())){
+            System.out.println("you win");}
+        else{
+            System.out.println("you lose");
+        }
+         
+         /* I want to replace the code as follow with my luckycard object
         //insert code to ask the user for Card value and suit, create their card
        System.out.println("please pick any card in the deck");
         
@@ -39,7 +53,7 @@ public class CardTrick {
             System.out.println("your card is in the magic hand of random cards");}
         else{
             System.out.println("your card is not in the magic hand of random cards");
-        }
+        }*/
       
     }
 
