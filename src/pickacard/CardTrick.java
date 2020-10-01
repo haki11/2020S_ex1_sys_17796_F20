@@ -32,16 +32,8 @@ public class CardTrick {
          System.out.println("your card's value is: "+ valuePick);
           System.out.println("your card's suit is: "+ suitPick);
          
-         
-        /* System.out.println("please enter the Card value and suit");
-        
-          int valueGuess = sc.nextInt();
-          String suitGuess = sc.nextLine();*/
-        
-        // and search magicHand here
-         
        
-        //Then report the result here
+        //Then report the result and match magicHand[i] here.
          Card c = new Card();
         if(valuePick == c.getValue() && suitPick.equals(c.getSuit())){
             System.out.println("your card is in the magic hand of random cards");}
