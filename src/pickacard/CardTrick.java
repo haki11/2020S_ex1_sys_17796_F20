@@ -27,7 +27,7 @@ public class CardTrick
 //System.out.println(c.getValue() + " of " + c.getSuit());
       }
 
-      //User must pick a card. Number and suit
+//User must pick a card. Number and suit
       System.out.println("Pick a card, Any card!");
       System.out.println("Pick a number from 1-13");
       int cardPickValue = scan.nextInt();
@@ -36,10 +36,10 @@ public class CardTrick
 
 
 
-      // and search magicHand here
+// and search magicHand here
       for (Card pickedCard : magicHand) {
 
-         //Results: 
+//Results: 
 
          System.out.println(pickedCard.getValue() + " of " + pickedCard.getSuit());
       }
