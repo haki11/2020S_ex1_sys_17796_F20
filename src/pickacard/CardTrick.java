@@ -36,11 +36,13 @@ public class CardTrick {
         //insert code to ask the user for Card value and suit, create their card
         Scanner input = new Scanner(System.in);
         
+        /*
         System.out.println("Enter your guess for the value of the card (1-13): ");
         int userValue = input.nextInt();
         
         System.out.println("Enter your guess for the suit of the card (0-3): ");
         int userSuit = input.nextInt();
+        */
         
         Card luckyCard = new Card();
         luckyCard.setValue(3);
@@ -52,11 +54,10 @@ public class CardTrick {
         userC.setSuit(Card.SUITS[userSuit]);
         */
         
-        System.out.println("Your card value is: " + userC.getValue());
-        System.out.println("Your card suit is: " + userC.getSuit());
+        System.out.println("The lucky card value is: " + luckyCard.getValue());
+        System.out.println("The lucky card suit is: " + luckyCard.getSuit());
         
         //  This just prints the magic hand
-        
         for (Card c : magicHand) {
             System.out.println(c.getValue() + " of " + c.getSuit());
         }
@@ -64,13 +65,13 @@ public class CardTrick {
         
         // and search magicHand here
         for (Card c : magicHand) {
-            if (userC.getValue() == c.getValue() && userC.getSuit().equals(c.getSuit())) {
-                System.out.println("Your card has a match in the magic hand! ");
+            if (luckyCard.getValue() == c.getValue() && luckyCard.getSuit().equals(c.getSuit())) {
+                System.out.println("The lucky card has a match in the magic hand! ");
                 
             }
             else {
                 //Then report the result here
-                System.out.println("You did not have a matching card. ");
+                System.out.println("the lucky card did not have a matching card in the magic hand. ");
             }
         }
         
