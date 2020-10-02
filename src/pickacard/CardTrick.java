@@ -36,13 +36,20 @@ public class CardTrick {
             magicHand[i] = c;
             }
 Scanner scan = new Scanner(System.in);
-System.out.println("Select the Card of your choice. Note that Ace = 1, Jack =11, Queen =12, King = 13");
+/*System.out.println("Select the Card of your choice. Note that Ace = 1, Jack =11, Queen =12, King = 13");
 System.out.print("Select the card Number:");
 int cNumber = scan.nextInt();
 System.out.print("Select the Suit for your card. Clubs, Hearts, Spades, Diamonds: ");
 String cType = scan.next();
-
- 
+*/
+       
+    Card luckyCard = new Card();
+    luckyCard.setSuit("Spades");
+    luckyCard.setValue(7);
+    
+    String cType = luckyCard.getSuit();
+    int cNumber = luckyCard.getValue();
+        
 if(cNumber > 14){
     System.out.println("Please select the card from the Deck and not from Space.");
 }
