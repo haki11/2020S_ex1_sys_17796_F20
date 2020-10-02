@@ -42,9 +42,15 @@ public class CardTrick {
         System.out.println("Enter your guess for the suit of the card (0-3): ");
         int userSuit = input.nextInt();
         
+        Card luckyCard = new Card();
+        luckyCard.setValue(3);
+        luckyCard.setSuit(Card.SUITS[3]);
+        
+        /*
         Card userC = new Card();
         userC.setValue(userValue);
         userC.setSuit(Card.SUITS[userSuit]);
+        */
         
         System.out.println("Your card value is: " + userC.getValue());
         System.out.println("Your card suit is: " + userC.getSuit());
