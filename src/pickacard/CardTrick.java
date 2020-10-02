@@ -50,9 +50,16 @@ String cType = scan.next();
     String cType = luckyCard.getSuit();
     int cNumber = luckyCard.getValue();
         
-if(cNumber > 14){
-    System.out.println("Please select the card from the Deck and not from Space.");
+//if(cNumber > 14){
+//  System.out.println("Please select the card from the Deck and not from Space.");
+//}
+for(int i = 0; i< Card.SUITS.length; i++){
+    if(cType == Card.SUITS[i] && (cNumber > 1 && cNumber <14)){
+        System.out.println("Selectable Card");
+    }
 }
+
+System.out.println("If you don't get 'Selectable Card', you choose Unavailable card.");
 
 
 
