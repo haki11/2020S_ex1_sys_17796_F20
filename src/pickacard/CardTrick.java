@@ -17,6 +17,7 @@ public class CardTrick {
             Card c = new Card();
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            // I am adding more code to work with on the assignment 
         }
 
       // I edit directly on github
