@@ -17,7 +17,8 @@ private int value;
     public static void main(String[] args) {
         Card[] magicffand = new Card[7];
         
-         public static final String[] SUIT ={"Hearts", "Diamonds", "Spades", "Clubs";
+    
+    public static  final String[] SUIT ={"Hearts", "Diamonds", "Spades", "Clubs";
     
 
     

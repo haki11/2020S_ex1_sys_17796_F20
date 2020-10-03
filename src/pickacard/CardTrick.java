@@ -12,13 +12,13 @@ import java.util.Scanner;
 public class CardTrick {
 
     public static void main(String[] args) {
-        Card[] goldHand = new Card[7];
+        Card[] gold = new Card[7];
         String randomValue = null;
         int[] card = {1,2,3,4,5,6,7};
         final String[]  SUIT=  {"Hearts", "Diamonds", "Spades", "Clubs"};
-        Iterable<Card> starCard1 = null;
+        Iterable<Card> star = null;
 
-        for (var starCard1 : starCard1) {
+        for (var starCard1 : star) {
             
             Card c = new Card();
             
@@ -40,13 +40,13 @@ public class CardTrick {
     
     Scanner input = new Scanner(System.in);
         //insert code to ask the user for Card value and suit, create their card
-        System.out.println("Enter card of wish");
+        System.out.println("Entering wish of card");
         
-      String userVal=input.nextLine();
-      if(randomValue.equalsIgnoreCase(userVal)) {
-          System.out.println("Win");
+      String inputValue=input.nextLine();
+      if(randomValue.equalsIgnoreCase(inputValue)) {
+          System.out.println("Wining");
       } else
-     System.out.println("lose");
+     System.out.println("losing");
      
   
    
@@ -55,18 +55,18 @@ public class CardTrick {
     int cards=7;
     String suit="spades";
     String CardWish= starCard(card,suit);
-    System.out.println("Card of my wish :"+CardWish);
+    System.out.println("Card of Wish :"+CardWish);
 }
      public static String starCard(int number,String suit) {
     Card c = new Card();
-    int num =4;
+    int numbers =4;
     String suits = "hearts";
-    String value = num+ " " + suits;
+    String value = numbers+ " " + suits;
     return value;
 }     
 
     private static String starCard(int[] card, String suit) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+        throw new UnsupportedOperationException(" "); 
     }
 
 }
