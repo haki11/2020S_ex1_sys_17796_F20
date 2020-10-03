@@ -27,12 +27,18 @@ public class CardTrick {
         }
 
         //insert code to ask the user for Card value and suit, create their card
+        /*
         Scanner scan = new Scanner(System.in);
         System.out.println("Pick a random card and enter the card value and suit: ");
         String userCard;
         userCard = scan.nextLine();
         int found = -1;
-        
+        */
+        Card luckyCard = new Card[suit, value]{
+            this.suit = diamonds;
+            this.value = 7;
+        }
+                
         // and search magicHand here
         for (int i=0; i < magicHand.length; i++){
             if (magicHand[i].userCard.equals(userCard)){
