@@ -49,6 +49,7 @@ public class CardTrick {
         //userCard.setValue(userCardValue);
         //userCard.setSuit(userCardSuit);
         
+        // create hard coded lucky card
         Card luckyCard = new Card();
         luckyCard.setValue(2);
         luckyCard.setSuit("Hearts");
