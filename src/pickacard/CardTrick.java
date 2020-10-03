@@ -62,6 +62,11 @@ public class CardTrick {
             //System.out.print(magicHand[i].getValue() + " ");
             //System.out.println(magicHand[i].getSuit());
             // check if user card exists in magic deck
+            // check if user card exists in magic hand
+            //if (userCard.getValue() == magicHand[i].getValue() && userCard.getSuit().equals(magicHand[i].getSuit())) {
+            //    found = true;
+            //}
+            // check if lucky card exists in magic hand
             if (luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit().equals(magicHand[i].getSuit())) {
                 found = true;
             }
