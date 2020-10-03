@@ -21,8 +21,8 @@ public class CardTrick {
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
-            c.setValue((int) (Math.random()* 13)+ 1);
-            c.setSuit(Card.SUITS[(int) (Math.random()*4)]);
+            c.setValue((int) (Math.random()* 13)+ 1);   //set value to a random number from 1 to 13
+            c.setSuit(Card.SUITS[(int) (Math.random()*4)]); //set value to a random number from 0 to 3
             // I am adding more code to work with on the assignment
             
             magicHand[i] = c;
@@ -40,29 +40,29 @@ public class CardTrick {
         
         // I edit directly on github
         
-        Card luckyCard = new Card();
-        luckyCard.setValue(2);
-        luckyCard.setSuit(Card.SUITS[1]);
+        Card luckyCard = new Card();    //create a lucky card
+        luckyCard.setValue(2);  //set the value to 2
+        luckyCard.setSuit(Card.SUITS[1]);   //set the suit to 1
               
-//         System.out.println("your chosen card is: " + b.getValue() + " of " + b.getSuit());
+        System.out.println("your lucky card is: " + luckyCard.getValue() + " of " + luckyCard.getSuit());   //show the lucky card
         
-        for (Card c : magicHand){ 
-            if ((b.getValue() == c.getValue()) && (b.getSuit() == c.getSuit())){
-                check = true;
+        for (Card c : magicHand){   //loop through the magic hand
+            if ((luckyCard.getValue() == c.getValue()) && (luckyCard.getSuit() == c.getSuit())){
+                check = true;   //if the lucky card is in the magic hand set the boolean to true
             }
         }
         
-        if (check){
-            System.out.println("Your chosen card is in the magic hand!");
+        if (check){ //if the boolean is true show winning message
+            System.out.println("WINNER Your lucky card is in the magic hand!");
         }
-        else {
-            System.out.println("Your chosen card is not in the magic hand...");
+        else {  //otherwise show a losing message
+            System.out.println("You lost... Your lucky card is not in the magic hand...");
         }
         
         System.out.println("\nThe magic hand:");
         
         for (Card c : magicHand) {
-            System.out.println(c.getValue() + " of " + c.getSuit());
+            System.out.println(c.getValue() + " of " + c.getSuit());    //show the magic hand
         }
 
 
