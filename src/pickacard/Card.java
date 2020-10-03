@@ -11,35 +11,19 @@ package pickacard;
  */
 public class Card {
 
-  private  String suit;
+ private  String suit;
 private int value;
     
     public static void main(String[] args) {
-        Card[] magic = new Card[7];
-
+        Card[] magicffand = new Card[7];
         
-    public static String [] = {"Hearts", "Diamonds", "Spades", "Clubs"};
+         public static final String[] SUIT ={"Hearts", "Diamonds", "Spades", "Clubs";
+    
+
+    
     /**
      * @return the suit
      */
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone(); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public Card(String suit, int value) {
-        this.suit = suit;
-        this.value = value;
-    }
-
-    public Card() {
-    }
-
     public String getSuit() {
         return suit;
     }
@@ -64,7 +48,5 @@ private int value;
     public void setValue(int value) {
         this.value = value;
     }
-   
-   
-    
+
 }

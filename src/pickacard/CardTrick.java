@@ -18,7 +18,7 @@ public class CardTrick {
         final String[]  SUIT=  {"Hearts", "Diamonds", "Spades", "Clubs"};
         Iterable<Card> starCard1 = null;
 
-        for (Card starCard1 : starCard1) {
+        for (var starCard1 : starCard1) {
             
             Card c = new Card();
             
@@ -54,8 +54,8 @@ public class CardTrick {
         //Then report the result here
     int cards=7;
     String suit="spades";
-    String cardOfMyWish= starCard(card,suit);
-    System.out.println("Card of my wish :"+cardOfMyWish);
+    String CardWish= starCard(card,suit);
+    System.out.println("Card of my wish :"+CardWish);
 }
      public static String starCard(int number,String suit) {
     Card c = new Card();
@@ -66,9 +66,7 @@ public class CardTrick {
 }     
 
     private static String starCard(int[] card, String suit) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 
 }
-
-
