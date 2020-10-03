@@ -34,20 +34,24 @@ public class CardTrick {
         
         //insert code to ask the user for Card value and suit, create their card
         // get the card value from the user
-        System.out.print("Please enter your card value: ");
-        int userCardValue = out.nextInt();
+        //System.out.print("Please enter your card value: ");
+        //int userCardValue = out.nextInt();
         
         // Clean buffer
-        out.nextLine();
+        //out.nextLine();
         
         // get the suit from the user
-        System.out.print("Please enter your card suit: ");
-        String userCardSuit = out.nextLine();
+        //System.out.print("Please enter your card suit: ");
+        //String userCardSuit = out.nextLine();
         
         // create user card
-        Card userCard = new Card();
-        userCard.setValue(userCardValue);
-        userCard.setSuit(userCardSuit);
+        //Card userCard = new Card();
+        //userCard.setValue(userCardValue);
+        //userCard.setSuit(userCardSuit);
+        
+        Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit("Hearts");
         
         // and search magicHand here
         boolean found = false;
@@ -57,7 +61,7 @@ public class CardTrick {
             //System.out.print(magicHand[i].getValue() + " ");
             //System.out.println(magicHand[i].getSuit());
             // check if user card exists in magic deck
-            if (userCard.getValue() == magicHand[i].getValue() && userCard.getSuit().equals(magicHand[i].getSuit())) {
+            if (luckyCard.getValue() == magicHand[i].getValue() && luckyCard.getSuit().equals(magicHand[i].getSuit())) {
                 found = true;
             }
         }
