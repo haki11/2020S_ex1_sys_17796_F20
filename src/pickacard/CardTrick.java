@@ -20,9 +20,9 @@ public class CardTrick {
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
             //c.setValue(insert call to random number generator here)
-            c.setValue(5);
+            c.setValue((int) (Math.random() * 14));
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            c.setSuit(Card.SUITS[1]);
+            c.setSuit(Card.SUITS[(int) (Math.random() * 4)]);
             //new commit
         }
 
