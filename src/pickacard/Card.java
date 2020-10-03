@@ -17,11 +17,29 @@ private int value;
     public static void main(String[] args) {
         Card[] magic = new Card[7];
 
-  
-    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
+        
+    public static String [] = {"Hearts", "Diamonds", "Spades", "Clubs"};
     /**
      * @return the suit
      */
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public Card(String suit, int value) {
+        this.suit = suit;
+        this.value = value;
+    }
+
+    public Card() {
+    }
+
     public String getSuit() {
         return suit;
     }

@@ -1,5 +1,7 @@
 package pickacard;
 
+import java.util.Scanner;
+
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects and then asks the user to pick a card
  *
@@ -14,6 +16,7 @@ public class CardTrick {
         String randomValue = null;
         int[] card = {1,2,3,4,5,6,7};
         final String[]  SUIT=  {"Hearts", "Diamonds", "Spades", "Clubs"};
+        Iterable<Card> starCard1 = null;
 
         for (Card starCard1 : starCard1) {
             
@@ -61,6 +64,10 @@ public class CardTrick {
     String value = num+ " " + suits;
     return value;
 }     
+
+    private static String starCard(int[] card, String suit) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }
 
