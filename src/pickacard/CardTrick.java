@@ -28,17 +28,23 @@ public class CardTrick {
             magicHand[i] = c;
         }
 
-        Scanner input = new Scanner (System.in);
-        System.out.println("Enter a card number from 1 to 13");
-        int value = input.nextInt();
-        System.out.print("Enter a suit number between 0-3(integer) (0 = hearts, 1 = diamonds, 2 = spades, and 3 = clubs): ");
-        int suit = input.nextInt();
+//         Scanner input = new Scanner (System.in);
+//         System.out.println("Enter a card number from 1 to 13");
+//         int value = input.nextInt();
+//         System.out.print("Enter a suit number between 0-3(integer) (0 = hearts, 1 = diamonds, 2 = spades, and 3 = clubs): ");
+//         int suit = input.nextInt();
+//         Card b = new Card();
         
-        Card b = new Card();
+//         b.setValue(value);
+//         b.setSuit(Card.SUITS[(int)(suit)]);
         
-        b.setValue(value);
-        b.setSuit(Card.SUITS[(int)(suit)]);
-        System.out.println("your chosen card is: " + b.getValue() + " of " + b.getSuit());
+        // I edit directly on github
+        
+        Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit(Card.SUITS[1]);
+              
+//         System.out.println("your chosen card is: " + b.getValue() + " of " + b.getSuit());
         
         for (Card c : magicHand){ 
             if ((b.getValue() == c.getValue()) && (b.getSuit() == c.getSuit())){
@@ -59,11 +65,7 @@ public class CardTrick {
             System.out.println(c.getValue() + " of " + c.getSuit());
         }
 
-// I edit directly on github
-        
-      Card luckyCard = new Card();
-      luckyCard.setValue(2);
-      luckyCard.setSuit(Card.SUITS[1]);
+
     }
 
 }
