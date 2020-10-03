@@ -36,6 +36,24 @@ public class CardTrick {
         Card playersCard = new Card();
         playersCard.setSuit(Card.SUITS[suit]);
         playersCard.setValue(val);
+        
+        boolean found = false;
+        for(Card c: magicHand)
+        {
+            if((c.getSuit().equals(playersCard.getSuit())) && (c.getValue()==(playersCard.getValue())))
+            {
+                found=true;
+                break;
+            }
+        }//end for
+        if(found)
+            {
+                System.out.println("You win! Your lucky card is in the hand");
+            }
+        else
+            {
+                System.out.println("I'm sorry, your card was not in the lucky hand");
+            }
 
       // I edit directly on github
     }
