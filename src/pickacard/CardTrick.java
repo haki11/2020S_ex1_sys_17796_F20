@@ -22,25 +22,29 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Please choose the suit for your card:");
-        for(int i=0;i<Card.SUITS.length; i++)
-        {
-            System.out.println(i + ": " + Card.SUITS[i]);
-        }
-        int suit = sc.nextInt();
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Please choose the suit for your card:");
+//        for(int i=0;i<Card.SUITS.length; i++)
+//        {
+//            System.out.println(i + ": " + Card.SUITS[i]);
+//        }
+//        int suit = sc.nextInt();
         
-        System.out.println("Please enter the value of the card you wish to create");
-        int val = sc.nextInt();
+//        System.out.println("Please enter the value of the card you wish to create");
+//        int val = sc.nextInt();
         
-        Card playersCard = new Card();
-        playersCard.setSuit(Card.SUITS[suit]);
-        playersCard.setValue(val);
+//        Card playersCard = new Card();
+//        playersCard.setSuit(Card.SUITS[suit]);
+//        playersCard.setValue(val);
+        
+        Card luckyCard = new Card();    
+        luckyCard.setValue(3);  
+        luckyCard.setSuit(Card.SUITS[3]);   
         
         boolean found = false;
         for(Card c: magicHand)
         {
-            if((c.getSuit().equals(playersCard.getSuit())) && (c.getValue()==(playersCard.getValue())))
+            if((c.getSuit().equals(luckyCard.getSuit())) && (c.getValue()==(luckyCard.getValue())))
             {
                 found=true;
                 break;
