@@ -60,6 +60,10 @@ public class CardTrick {
         }
 
 // I edit directly on github
+        
+      Card luckyCard = new Card();
+      luckyCard.setValue(2);
+      luckyCard.setSuit(Card.SUITS[1]);
     }
 
 }
