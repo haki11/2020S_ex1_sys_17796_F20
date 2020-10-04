@@ -47,10 +47,10 @@ public class CardTrick {
         String cardSuit = scan2.nextLine();
         
         // Prints out the card user enters
-        System.out.println(cardValue + " " + cardSuit);
+        System.out.println(cardValue + " " + cardSuit);*/
         
         // Boolean flag for is user card is found in magicHands
-        boolean foundCard = false;*/
+        boolean foundCard = false;
         
         // Looks for user card in magicHands array
         for(Card c : magicHand){
