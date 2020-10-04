@@ -1,6 +1,7 @@
 package pickacard;
 
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects and then asks the user to pick a card and
@@ -12,6 +13,8 @@ import java.util.Random;
 public class CardTrick {
 
     public static void main(String[] args) {
+        Scanner scan1 = new Scanner(System.in);
+        Scanner scan2 = new Scanner(System.in);
         
         Card[] magicHand = new Card[7];
 
@@ -23,11 +26,42 @@ public class CardTrick {
             // Sets card value to random number between 1-13
             c.setValue(r.nextInt(13)+1);
             
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            // Sets card suit to a suit witha random index
             c.setSuit(Card.SUITS[r.nextInt(4)]);
+            
+            // Appends card to magicHand array
+            magicHand[i] = c;
         }
-
-      // I edit directly on github
+        
+        // Asks for and collects user input for card value
+        System.out.print("Pick a card value: ");
+        int cardValue = scan1.nextInt();
+        
+        // Asks for and collects user input for card suit
+        System.out.print("Pick a card suit: ");
+        String cardSuit = scan2.nextLine();
+        
+        // Prints out the card user enters
+        System.out.println(cardValue + " " + cardSuit);
+        
+        // Boolean flag for is user card is found in magicHands
+        boolean foundCard = false;
+        
+        // Looks for user card in magicHands array
+        for(Card c : magicHand){
+            // Sets flag to true if user card is found in magicHands
+            if(c.getValue() == cardValue && c.getSuit().equals(cardSuit)){
+                foundCard = true;
+            }
+        }
+        
+        // Prints out message based on if user card found in magicHands
+        if(foundCard){
+            System.out.println("Found it!");
+        } else{
+            System.out.println("Sorry, didn't find it.");
+        }
+        
     }
 
 }
