@@ -31,6 +31,10 @@ public class CardTrick {
             
             // Appends card to magicHand array
             magicHand[i] = c;
+            
+            Card luckyCard = new Card();
+            luckyCard.setValue(7);
+            luckyCard.setSuit("Hearts");
         }
         
         // Asks for and collects user input for card value
