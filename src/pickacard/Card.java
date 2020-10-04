@@ -6,9 +6,7 @@ package pickacard;
  * A suit (clubs, hearts, spades, diamonds).
  * There are 52 cards in a deck, no jokers.
  * This code is to be used in Exercise 1. When you create your own branch,
- * add your name as an author.
- * @author dancye
- * @author Paul Bonenfant
+ * Mu Zhang
  */
 public class Card {
 
@@ -44,6 +42,14 @@ public class Card {
         this.value = value;
     }
    
-   
-    
+   public boolean equals(Object obj){
+       Card other = (Card) obj;
+       if(this.value != other.getValue()){
+           return false;
+        }
+       if(!(this.getSuit()).equals(other.getSuit())){
+           return false;
+       }
+           return true;
+   }
 }
