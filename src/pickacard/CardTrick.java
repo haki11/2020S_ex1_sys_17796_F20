@@ -39,6 +39,11 @@ public class CardTrick {
         }
         
       // I edit directly on github
+      // Task 6. luckyCard
+      Card luckyCard = new Card();
+      luckyCard.setValue(Ace);
+      luckyCard.setSuit(Spades);
+      System.out.print("\nLucky Card is " + luckyCard.getValue() + " of " + luckyCard.getSuit());
     }
     
     
