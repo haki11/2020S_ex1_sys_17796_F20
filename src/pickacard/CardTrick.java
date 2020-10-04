@@ -17,6 +17,10 @@ public class CardTrick {
         Scanner scan2 = new Scanner(System.in);
         
         Card[] magicHand = new Card[7];
+        
+        Card luckyCard = new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit("Hearts");
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
@@ -32,13 +36,10 @@ public class CardTrick {
             // Appends card to magicHand array
             magicHand[i] = c;
             
-            Card luckyCard = new Card();
-            luckyCard.setValue(7);
-            luckyCard.setSuit("Hearts");
         }
         
         // Asks for and collects user input for card value
-        System.out.print("Pick a card value: ");
+        /*System.out.print("Pick a card value: ");
         int cardValue = scan1.nextInt();
         
         // Asks for and collects user input for card suit
@@ -49,12 +50,15 @@ public class CardTrick {
         System.out.println(cardValue + " " + cardSuit);
         
         // Boolean flag for is user card is found in magicHands
-        boolean foundCard = false;
+        boolean foundCard = false;*/
         
         // Looks for user card in magicHands array
         for(Card c : magicHand){
             // Sets flag to true if user card is found in magicHands
-            if(c.getValue() == cardValue && c.getSuit().equals(cardSuit)){
+            /*if(c.getValue() == cardValue && c.getSuit().equals(cardSuit)){
+                foundCard = true;
+            }*/
+            if(c.getValue() == luckyCard.getValue() && c.getSuit().equals(luckyCard.getSuit())){
                 foundCard = true;
             }
         }
