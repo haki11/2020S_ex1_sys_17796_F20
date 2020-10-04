@@ -17,14 +17,14 @@ public class CardTrick {
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
-            // Initalizes r as 
+            // Initalizes Random() object 
             Random r = new Random();
-            // Generates a random number between 1-13 inclusively
-            int cardRandomValue = r.nextInt(13)+1;
-            // Sets card value to random number
-            c.setValue(cardRandomValue);
+            
+            // Sets card value to random number between 1-13
+            c.setValue(r.nextInt(13)+1);
             
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            c.setSuit(Card.SUITS[r.nextInt(4)]);
         }
 
       // I edit directly on github
