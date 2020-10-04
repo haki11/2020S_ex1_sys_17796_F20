@@ -1,6 +1,8 @@
 package pickacard;
 
 import java.util.Scanner;
+import static pickacard.Card.Suit.Spades;
+import static pickacard.Card.Value.Ace;
 import static pickacard.Card.genRandSuit;
 import static pickacard.Card.genRandValue;
 
@@ -40,12 +42,12 @@ public class CardTrick {
         
       // I edit directly on github
       // Task 6. luckyCard
-      Card luckyCard = new Card();
-      luckyCard.setValue(Ace);
-      luckyCard.setSuit(Spades);
-      System.out.print("\nLucky Card is " + luckyCard.getValue() + " of " + luckyCard.getSuit());
+      Card.Value lcV;
+      Card.Suit lcS;
+      lcV = Ace;
+      lcS = Spades;
+      System.out.println("\n");
+      System.out.print("Lucky Card is " + lcV.name() + " of " + lcS.name() + "\n");
     }
-    
-    
     
  }
