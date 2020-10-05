@@ -10,7 +10,7 @@
  * @modifiedby Shawn Pattullo 2020 - 10 - 04
  */
 
-import java.util.Scanner;
+//import java.util.Scanner;
 public class CardTrick {
 
     public static void main(String[] args) {
@@ -23,17 +23,17 @@ public class CardTrick {
             Card c = new Card();
             
             
-            //c.setValue(insert call to random number generator here)
-            c.setValue((int)((Math.random()* 13)+ 1));
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            c.setSuit(Card.SUITS [(int)(Math.random()* 4)]);
+            
+            c.setValue((int)((Math.random()* 13)+ 1));  //c.setValue(insert call to random number generator here)
+            
+            c.setSuit(Card.SUITS [(int)(Math.random()* 4)]); //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
 
             magicHand[i] = c;
             
          }
     
         
-   Scanner in = new Scanner(System.in); // scanner created
+   /*Scanner in = new Scanner(System.in); // scanner created
         // user prompt for both card number and suit.
         System.out.print("Enter a number between 1-13(integer).This will be your"
           + " card number.. ex. 11 = JACK, 12 = QUEEN etc: ");
@@ -54,18 +54,33 @@ public class CardTrick {
                 Card.SUITS[userCardSuit]); //prints user's card
 
         System.out.println("The Magic Hand Consists of: ");
-
+      */
+       
+       Card luckyCard = new Card(); //Creates lucky Card
+       
+       luckyCard.setValue(1) // Sets Value of luckyCard.
+       luckyCard.setSuit(Card.SUITS[2]); // Sets Suit of luckyCard.
+       System.out.println("Lucky Card within the Deck is: " + luckyCard.getValue()); // Print out of what the luckCard is.
 
        for (Card c : magicHand){ //print contents of magicHand
             System.out.println(c.getValue() + " of " + c.getSuit());
 }
-       for (Card c : magicHand) { //checks to see if user's card is within the content of magicHand
+       /*for (Card c : magicHand) { //checks to see if user's card is within the content of magicHand
             if (b.getValue() == c.getValue() 
                 && b.getSuit().equals(c.getSuit())){ 
                 System.out.println("Your card is in the magic hand!");
             }else{
                 System.out.println("your card was not one of the cards in the "
             + "magic hand");
+            */
+       for (Card c : magicHand) { //checks to see if user's card is within the content of magicHand
+            if (luckyCard.getValue() == c.getValue() 
+                && luckyCard.getSuit().equals(c.getSuit())){ 
+                System.out.println("The Lucky Card is in the magic hand!");
+            }else{
+                System.out.println("The Lucky Card was not one of the cards in the "
+            + "magic hand");
+       
     }
 }
 }
