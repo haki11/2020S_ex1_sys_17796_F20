@@ -15,6 +15,8 @@ public class CardTrick {
     public static void main(String[] args) {
 
         Card[] magicHand = new Card[7];
+        
+        Card luckCard = new Card()
 
         int index = 0;
         for (int card = 0; card < magicHand.length; card++) {
@@ -36,26 +38,42 @@ public class CardTrick {
         printDeck(magicHand);
         
         //prompt user input for card rank and suit
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Pick a card value (1 -13): ");
-        int userValue = sc.nextInt();
-        System.out.print("Pick a card suit: ");
-        String userSuit = sc.next().toUpperCase();
+//         Scanner sc = new Scanner(System.in);
+//         System.out.print("Pick a card value (1 -13): ");
+//         int userValue = sc.nextInt();
+//         System.out.print("Pick a card suit: ");
+//         String userSuit = sc.next().toUpperCase();
         
         //compare user entered value with values of cards in magicHand
+//         boolean found = false;
+//         for (int i = 0; i < 7; i++) {
+//             if (magicHand[i].getSuit().toUpperCase().equals(userSuit) 
+//                     && magicHand[i].getValue() == userValue) {
+//                 found = true;
+//                 break;
+//             }
+//         }
+        
+//         if (found) {
+//             System.out.println("Your selected card is in the Magic Hand");
+//         } else {
+//             System.out.println("Your selected card is not in the Magic Hand");
+//         }
+        
+        
         boolean found = false;
         for (int i = 0; i < 7; i++) {
-            if (magicHand[i].getSuit().toUpperCase().equals(userSuit) 
-                    && magicHand[i].getValue() == userValue) {
+            if (magicHand[i].getSuit().equals(luckyCard.getSuit())
+                    && magicHand[i].getValue() == luckyCard.getValue()) {
                 found = true;
                 break;
             }
         }
-        
+
         if (found) {
-            System.out.println("Your selected card is in the Magic Hand");
+            System.out.println("You hit the lucky card!");
         } else {
-            System.out.println("Your selected card is not in the Magic Hand");
+            System.out.println("You did not get the lucky card");
         }
         
     }
