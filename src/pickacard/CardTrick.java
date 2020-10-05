@@ -58,9 +58,9 @@ public class CardTrick {
        
        Card luckyCard = new Card(); //Creates lucky Card
        
-       luckyCard.setValue(1) // Sets Value of luckyCard.
+       luckyCard.setValue(1); // Sets Value of luckyCard.
        luckyCard.setSuit(Card.SUITS[2]); // Sets Suit of luckyCard.
-       System.out.println("Lucky Card within the Deck is: " + luckyCard.getValue()); // Print out of what the luckCard is.
+       System.out.println("Lucky Card within the Deck is: " + luckyCard.getValue() + " of " + luckyCard.getSuit()); // Print out of what the luckCard is.
 
        for (Card c : magicHand){ //print contents of magicHand
             System.out.println(c.getValue() + " of " + c.getSuit());
