@@ -44,6 +44,11 @@ public class Card {
         this.value = value;
     }
    
+    @Override
+    public String toString() {
+        return "your card is the " + value+", of " + suit;
+    }
+   
    
     
 }
