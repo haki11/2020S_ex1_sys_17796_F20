@@ -7,7 +7,7 @@
  * @author dancye
  * @author Paul Bonenfant
  * @author Shawn Pattullo
- * @modifiedby Shawn Pattullo 2020 - 10 - 02
+ * @modifiedby Shawn Pattullo 2020 - 10 - 04
  */
 
 import java.util.Scanner;
@@ -33,8 +33,8 @@ public class CardTrick {
          }
     
         
-   Scanner in = new Scanner(System.in);
-        
+   Scanner in = new Scanner(System.in); // scanner created
+        // user prompt for both card number and suit.
         System.out.print("Enter a number between 1-13(integer).This will be your"
           + " card number.. ex. 11 = JACK, 12 = QUEEN etc: ");
         int userCardNum = in.nextInt();
@@ -45,20 +45,21 @@ public class CardTrick {
            + "1 = DIAMONDS, 2 = SPADES, and 3 = CLUBS):  ");
         int userCardSuit = in.nextInt();
         
-        Card b = new Card();
+        Card b = new Card(); //create card
         
-        b.setValue((int)(userCardNum));
-        b.setSuit(Card.SUITS[(int)(userCardSuit)]);
+        b.setValue((int)(userCardNum)); //set value of card with user variable
+        b.setSuit(Card.SUITS[(int)(userCardSuit)]);//set suit based off user variable
+            
         System.out.println("your chosen card is: " + userCardNum + " of " + 
-                Card.SUITS[userCardSuit]);
+                Card.SUITS[userCardSuit]); //prints user's card
 
         System.out.println("The Magic Hand Consists of: ");
 
 
-       for (Card c : magicHand){ 
+       for (Card c : magicHand){ //print contents of magicHand
             System.out.println(c.getValue() + " of " + c.getSuit());
 }
-       for (Card c : magicHand) {
+       for (Card c : magicHand) { //checks to see if user's card is within the content of magicHand
             if (b.getValue() == c.getValue() 
                 && b.getSuit().equals(c.getSuit())){ 
                 System.out.println("Your card is in the magic hand!");
