@@ -16,7 +16,7 @@ public class CardTrick {
 
         Card[] magicHand = new Card[7];
         
-        Card luckCard = new Card()
+        Card luckyCard = new Card();
 
         int index = 0;
         for (int card = 0; card < magicHand.length; card++) {
