@@ -27,12 +27,15 @@ public class CardTrick {
     // lucky card
     Card luckyCard = new Card();
     System.out.println("Enter a card number: ");
-    luckyCard.setValue(scan.nextInt());
-    scan.nextLine();
-    System.out.println("Enter a card suit: ");
-    luckyCard.setSuit(scan.nextLine());
+    //luckyCard.setValue(scan.nextInt());
     
-    System.out.printf("Your card is: %d of %s \n", luckyCard.getValue(), luckyCard.getSuit());
+    //scan.nextLine();
+    //System.out.println("Enter a card suit: ");
+    //luckyCard.setSuit(scan.nextLine());
+    
+    //System.out.printf("Your card is: %d of %s \n", luckyCard.getValue(), luckyCard.getSuit());
+        System.out.println("Your card is: 0 of 3");
+ 
  
     
 
