@@ -1,5 +1,5 @@
 package pickacard;
-
+import java.util.Scanner;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects and then asks the user to pick a card and
@@ -7,12 +7,10 @@ package pickacard;
  *
  * @author Haki sharifi
  * @author Ubaid Ur Rehman
+ * Student ID:991395773
  * Date:2020-10-05
  * 
  */
-import java.util.Scanner;
-
-
 public class CardTrick {
 
     public static void main(String[] args) {
@@ -20,6 +18,7 @@ public class CardTrick {
         
         // Card object
         Card[] magicHand = new Card[7];
+        
         //c.setValue(insert call to random number generator here)
         
         
