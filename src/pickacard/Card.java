@@ -15,7 +15,7 @@ public class Card {
 private int value;
     
     public static void main(String[] args) {
-        Card[] magicffand = new Card[7];
+        Card[] magicffand = new Card[7];//choose one card from 7 cards
         
     
     public static  final String[] SUIT ={"Hearts", "Diamonds", "Spades", "Clubs";
