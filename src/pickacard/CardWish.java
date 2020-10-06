@@ -6,7 +6,7 @@
 package pickacard;
 
 /**
- *
+ * this class is for choose card
  * @author 16476
  */
 public class CardWish {
