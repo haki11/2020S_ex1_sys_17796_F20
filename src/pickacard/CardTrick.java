@@ -1,25 +1,58 @@
 package pickacard;
 
+
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects and then asks the user to pick a card and
  * searches the array of cards for the match to the user's card. To be used as starting code in ICE 1
  *
- * @author dancye
- * @author Paul Bonenfant
+ * @author Haki sharifi
+ * @author Ubaid Ur Rehman
+ * Date:2020-10-05
+ * 
  */
+import java.util.Scanner;
+
+
 public class CardTrick {
 
     public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
         
+        // Card object
         Card[] magicHand = new Card[7];
-
+        //c.setValue(insert call to random number generator here)
+        
+        
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
+            
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            c.setValue((int)(Math.random()*13)+1);
+            c.setSuit(Card.SUITS[(int)((Math.random()*3)+1)]);
+            magicHand[i]=c;
+            System.out.println(c.getValue()+" "+c.getSuit());
         }
 
-      // I edit directly on github
+        System.out.println("Enter a Card Value Between 1 and 13.");
+        int val1 = input.nextInt();
+        System.out.println("Enter a Card Suit(diamond,spade,heart,club)");
+        String luckyCard = input.next();
+        
+        
+        
+        //outcome if card was drawn or not
+        boolean output = false;
+        for(int j=0; j<magicHand.length; j++){
+            if(val1 == magicHand[j].getValue() && luckyCard.equalsIgnoreCase(magicHand[j].getSuit()))
+            {   System.out.println("You Win");
+                output=true;
+            }
+        }
+        
+        if(output==false){
+            System.out.println("you loose");
+        }
     }
 
 }
+
