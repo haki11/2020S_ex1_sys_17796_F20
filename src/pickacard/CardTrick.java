@@ -19,15 +19,14 @@ public class CardTrick {
         
         for (int i = 0; i < magicHand.length; i++) {
             //Card c = new Card();
-            magicHand[i] = new Card();
-            int suit, num;
-            
-            suit = (int) (Math.random()*3+1); // Suit = Spades, Diamonds, Hearts, Clubs
-            num = (int) (Math.random()*12+1); // Number generator
-            magicHand[i].setValue(num);
-            magicHand[i].setSuit(Card.SUITS[suit]);
+            magicHand[i] = new Card();            
+            int suit = (int) (Math.random()*3+1); // Suit generator (Spades, Diamonds, Hearts, Clubs)
+            int num = (int) (Math.random()*12+1); // Number generator (1-13)
+           
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            magicHand[i].setValue(num);
+            magicHand[i].setSuit(Card.SUITS[suit]);
         }
 
       System.out.println("Enter a card number: ");
@@ -45,6 +44,23 @@ public class CardTrick {
               flag = false;
           }
       }
+      
+      for (int k = 0; k < magicHand.length; k++) {
+          System.out.println("Card number " + magicHand[k].getValue() + " card suit " + magicHand[k].getSuit());   
+      }
+      
+      if (flag = true) {
+          System.out.println("Your cards match! :)");
+      }
+      else {
+          System.out.println("Your cards don't match! :(");
+      }
+      
+      Card match = new Card();
+      match.setValue(7);
+      match.setSuit("Hearts");
+      
+      System.out.println("Your card: " + match.getValue() + " Suit: " + match.getSuit());
     }
 
 }
