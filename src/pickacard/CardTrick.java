@@ -36,23 +36,22 @@ public class CardTrick {
       
       boolean flag = false;
       
-      for (int j = 0; j < magicHand.length; j++) {
-          if (cardNum == magicHand[j].getValue() && cardSuit == magicHand[j].getSuit()){
-              flag = true;
-          }
-          else {
-              flag = false;
-          }
-      }
+        for (Card magicHand1 : magicHand) {
+            if (cardNum == magicHand1.getValue() && cardSuit.equals(magicHand1.getSuit())) {
+                flag = true;
+            } else {
+                flag = false;
+            }
+        }
       
-      for (int k = 0; k < magicHand.length; k++) {
-          System.out.println("Card number " + magicHand[k].getValue() + " card suit " + magicHand[k].getSuit());   
-      }
+        for (Card magicHand1 : magicHand) {
+            System.out.println("Card number " + magicHand1.getValue() + " card suit " + magicHand1.getSuit());
+        }
       
       if (flag = true) {
           System.out.println("Your cards match! :)");
       }
-      else {
+      else if (flag = false) {
           System.out.println("Your cards don't match! :(");
       }
       
