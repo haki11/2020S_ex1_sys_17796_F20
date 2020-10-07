@@ -26,7 +26,7 @@ public class CardTrick {
         Card inputCard = new Card(); //create defalut user input card object 
         int Cvalue;
         String Csuit;
-        boolean cfound = false;
+        boolean cardfound = false;
         
         Scanner input = new Scanner(System.in); // get input from user for a card 
             System.out.print("Please enter a card value between 1-13: ");
@@ -35,21 +35,21 @@ public class CardTrick {
             System.out.println("Please enter a card suit (clubs, hearts, spades or diamonds: ");//get user input for card suit
             Csuit = input.next(); //initialize Csuit to user input 
             
-            inputCard.setValue(Cvalue); //set valsue for input card
+            inputCard.setValue(Cvalue); //set value for inpu card
             inputCard.setSuit(Csuit); //set suit for input card
             
             for(int i=0;i<magicHand.length;i++){
                 if(magicHand[i].getValue() == inputCard.getValue()
                         && magicHand[i].getSuit().equalsIgnoreCase(inputCard.getSuit()))
                         {
-                            cfound= true;
+                            cardfound= true;
                             break;
                         }
                 }
-            if(cfound)
+            if(cardfound)
                 System.out.println("Input card was found!");
             else
-                System.out.println("Input card could not be found");
+                System.out.println("Input card could not be found.");
             }
         
       } // end of card trick class  
