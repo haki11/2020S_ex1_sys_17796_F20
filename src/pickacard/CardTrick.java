@@ -19,14 +19,14 @@ public class CardTrick {
         for (int i = 0; i < magicHand.length; i++) {
            Card c = new Card();
             c.setValue(num.nextInt(13)+1); //(insert call to random number generator here)
-            c.setSUITS(Card.SUITS[num.nextInt(4)]); //[insert call to random number between 0-3 here])
+            c.setSuit(Card.SUITS[num.nextInt(4)]); //[insert call to random number between 0-3 here])
             
         }
         
         Card inputCard = new Card(); //create defalut user input card object 
         int Cvalue;
         String Csuit;
-        boolean found = false;
+        boolean cfound = false;
         
         Scanner input = new Scanner(System.in); // get input from user for a card 
             System.out.print("Please enter a card value between 1-13: ");
@@ -42,13 +42,14 @@ public class CardTrick {
                 if(magicHand[i].getValue() == inputCard.getValue()
                         && magicHand[i].getSuit().equalsIgnoreCase(inputCard.getSuit()))
                         {
-                            found= true;
+                            cfound= true;
                             break;
                         }
-                            
-                            
-                }           
-    
+                }
+            if(cfound)
+                System.out.println("Input card was found!");
+            else
+                System.out.println("Input card could not be found");
             }
         
       } // end of card trick class  
