@@ -20,7 +20,7 @@ public class CardTrick {
            Card c = new Card();
             c.setValue(num.nextInt(13)+1); //(insert call to random number generator here)
             c.setSuit(Card.SUITS[num.nextInt(4)]); //[insert call to random number between 0-3 here])
-            
+             magicHand[i] = c;
         }
         
         Card inputCard = new Card(); //create defalut user input card object 
