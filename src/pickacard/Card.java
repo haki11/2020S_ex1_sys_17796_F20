@@ -9,6 +9,7 @@ package pickacard;
  * add your name as an author.
  * @author dancye
  * @author Paul Bonenfant
+ * @author Bezawit Abebe
  */
 public class Card {
 
@@ -44,6 +45,12 @@ public class Card {
         this.value = value;
     }
    
-   
+  @Override
+  
+  // .toString overide to be able to check if MagicHand check is working correctly
+  
+  public String toString() {
+      return "value: "+ value + ", suit: "+ suit;
+  }
     
 }
