@@ -46,7 +46,7 @@ public class CardTrick {
         Card cUser = new Card();
         do {
             contLoop = false;
-            System.out.print("\nChoose a SUIT (1)Herats / (2)Diamonds / (3)Spades / (4)Club):\n");
+            System.out.print("\nChoose a SUIT (1)Herats / (2)Diamonds / (3)Spades / (4)Clubs):\n");
             try {
                 valuex = inputScan.nextInt();
                 switch (valuex) {
